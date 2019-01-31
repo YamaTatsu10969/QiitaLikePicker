@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		674061A221FE0A930065B7DC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		67DB948421FD4C21000F17ED /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67DB948421FD4C21000F17ED /* QuitaLikePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuitaLikePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67DB948721FD4C21000F17ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67DB948921FD4C21000F17ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		67DB948C21FD4C21000F17ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		67DB947B21FD4C21000F17ED = {
 			isa = PBXGroup;
 			children = (
-				67DB948621FD4C21000F17ED /* Tinder */,
+				67DB948621FD4C21000F17ED /* QuitaLikePicker */,
 				67DB948521FD4C21000F17ED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		67DB948521FD4C21000F17ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				67DB948421FD4C21000F17ED /* Tinder.app */,
+				67DB948421FD4C21000F17ED /* QuitaLikePicker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		67DB948621FD4C21000F17ED /* Tinder */ = {
+		67DB948621FD4C21000F17ED /* QuitaLikePicker */ = {
 			isa = PBXGroup;
 			children = (
 				67DB948721FD4C21000F17ED /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				67DB949021FD4C22000F17ED /* LaunchScreen.storyboard */,
 				67DB949321FD4C22000F17ED /* Info.plist */,
 			);
-			path = Tinder;
+			path = QuitaLikePicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		67DB948321FD4C21000F17ED /* Tinder */ = {
+		67DB948321FD4C21000F17ED /* QuitaLikePicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 67DB949621FD4C22000F17ED /* Build configuration list for PBXNativeTarget "Tinder" */;
+			buildConfigurationList = 67DB949621FD4C22000F17ED /* Build configuration list for PBXNativeTarget "QuitaLikePicker" */;
 			buildPhases = (
 				67DB948021FD4C21000F17ED /* Sources */,
 				67DB948121FD4C21000F17ED /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = Tinder;
+			name = QuitaLikePicker;
 			productName = Tinder;
-			productReference = 67DB948421FD4C21000F17ED /* Tinder.app */;
+			productReference = 67DB948421FD4C21000F17ED /* QuitaLikePicker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 67DB947F21FD4C21000F17ED /* Build configuration list for PBXProject "Tinder" */;
+			buildConfigurationList = 67DB947F21FD4C21000F17ED /* Build configuration list for PBXProject "QuitaLikePicker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				67DB948321FD4C21000F17ED /* Tinder */,
+				67DB948321FD4C21000F17ED /* QuitaLikePicker */,
 			);
 		};
 /* End PBXProject section */
@@ -288,7 +288,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 92S7PT7663;
-				INFOPLIST_FILE = Tinder/Info.plist;
+				INFOPLIST_FILE = QuitaLikePicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +306,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 92S7PT7663;
-				INFOPLIST_FILE = Tinder/Info.plist;
+				INFOPLIST_FILE = QuitaLikePicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		67DB947F21FD4C21000F17ED /* Build configuration list for PBXProject "Tinder" */ = {
+		67DB947F21FD4C21000F17ED /* Build configuration list for PBXProject "QuitaLikePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67DB949421FD4C22000F17ED /* Debug */,
@@ -330,7 +330,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67DB949621FD4C22000F17ED /* Build configuration list for PBXNativeTarget "Tinder" */ = {
+		67DB949621FD4C22000F17ED /* Build configuration list for PBXNativeTarget "QuitaLikePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67DB949721FD4C22000F17ED /* Debug */,
