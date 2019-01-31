@@ -239,11 +239,11 @@
             </objects>
             <point key="canvasLocation" x="1828" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="g37-0v-OTn">
             <objects>
-                <viewController id="ioS-EY-B7m" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EhL-w5-EHL">
+                <viewController id="ioS-EY-B7m" customClass="LoginViewController" customModule="QuitaLikePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EhL-w5-EHL" customClass="ARSCNView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

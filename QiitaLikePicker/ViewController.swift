@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController {
     
@@ -26,7 +28,7 @@ class ViewController: UIViewController {
     var selectedCardCount: Int = 0
     
     // likeされたらlikedNameに入れていく
-    let name = ["なつき","あかね","さくら","カルロス"]
+    var name = ["","あかね","さくら","カルロス"]
     var likedName = [String]()
     
     override func viewDidLoad() {
@@ -39,6 +41,36 @@ class ViewController: UIViewController {
         people.append(person2)
         people.append(person3)
         people.append(person4)
+        
+        getQiitaArticle()
+    }
+    
+    func getQiitaArticle(){
+        Alamofire.request("https://qiita.com/api/v2/items?page=20&per_page=20", method: .get,
+                          encoding: URLEncoding.default)
+            .responseJSON{(response: DataResponse<Any>) in
+                if(response.response?.statusCode == 200){
+                    guard let obj = response.result.value else {
+                        return
+                    }
+                    let json = JSON(obj)
+                    print(json)
+                    json.forEach { (_, json) in
+                        print(json["title"].string)// 記事タイトルを表示
+                        print(json["url"].string)
+                        print(json["likes_count"].int)
+                        print(json["updated_at"].string)
+                        print(json["comments_count"].int)
+                        print(json["user"]["name"].string)
+                    }
+                    if let name = json["title"].string {
+                        self.name[0] = name
+                        print(name)
+                    }
+                }
+                
+                
+        }
     }
     
     func resetCard(){
@@ -64,30 +96,7 @@ class ViewController: UIViewController {
     }
     
     
-    func flyCardToRight(){
-        UIView.animate(withDuration: 0.2, animations: {
-            self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x + 500, y: self.people[self.selectedCardCount].center.y );
-                self.resetCard()
-        })
-        likeImageView.alpha = 0
-        likedName.append(name[selectedCardCount])
-        selectedCardCount += 1
-        if selectedCardCount >= people.count{
-            performSegue(withIdentifier: "pushList", sender: self)
-        }
-    }
     
-    func flyCardToLeft(){
-        UIView.animate(withDuration: 0.2, animations: {
-            self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x - 500, y: self.people[self.selectedCardCount].center.y)
-            self.resetCard()
-        })
-        likeImageView.alpha = 0
-        selectedCardCount += 1
-        if selectedCardCount >= people.count{
-            performSegue(withIdentifier: "pushList", sender: self)
-        }
-    }
     
     // @IBAction はMainStoryBoard から紐づいているっていう宣言
     @IBAction func swipeCard(_ sender: UIPanGestureRecognizer) {
@@ -144,6 +153,31 @@ class ViewController: UIViewController {
             })
             // 真ん中に戻したら画像を消すため
             likeImageView.alpha = 0
+        }
+    }
+    
+    func flyCardToRight(){
+        UIView.animate(withDuration: 0.2, animations: {
+            self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x + 500, y: self.people[self.selectedCardCount].center.y );
+            self.resetCard()
+        })
+        likeImageView.alpha = 0
+        likedName.append(name[selectedCardCount])
+        selectedCardCount += 1
+        if selectedCardCount >= people.count{
+            performSegue(withIdentifier: "pushList", sender: self)
+        }
+    }
+    
+    func flyCardToLeft(){
+        UIView.animate(withDuration: 0.2, animations: {
+            self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x - 500, y: self.people[self.selectedCardCount].center.y)
+            self.resetCard()
+        })
+        likeImageView.alpha = 0
+        selectedCardCount += 1
+        if selectedCardCount >= people.count{
+            performSegue(withIdentifier: "pushList", sender: self)
         }
     }
     
