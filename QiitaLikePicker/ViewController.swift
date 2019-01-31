@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var person3: UIView!
     @IBOutlet weak var person4: UIView!
     
+    @IBOutlet weak var titleLabel1: UILabel!
+    @IBOutlet weak var likeCountLabel1: UILabel!
+    @IBOutlet weak var nameLabel1: UILabel!
     
     
     //値がないときは　! をつける
@@ -28,8 +31,14 @@ class ViewController: UIViewController {
     var selectedCardCount: Int = 0
     
     // likeされたらlikedNameに入れていく
-    var name = ["","あかね","さくら","カルロス"]
+    // var name = ["なつき","あかね","さくら","カルロス"]
     var likedName = [String]()
+    var ArticleTitle = [String]()
+    var UserName = [String]()
+    var LikeCount = [Int]()
+    var url = [String]()
+    var updateAt = [String]()
+    var selectArticleIndex = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +52,11 @@ class ViewController: UIViewController {
         people.append(person4)
         
         getQiitaArticle()
+        
     }
     
     func getQiitaArticle(){
-        Alamofire.request("https://qiita.com/api/v2/items?page=20&per_page=20", method: .get,
+        Alamofire.request("https://qiita.com/api/v2/items?page=13&per_page=4", method: .get,
                           encoding: URLEncoding.default)
             .responseJSON{(response: DataResponse<Any>) in
                 if(response.response?.statusCode == 200){
@@ -56,17 +66,17 @@ class ViewController: UIViewController {
                     let json = JSON(obj)
                     print(json)
                     json.forEach { (_, json) in
-                        print(json["title"].string)// 記事タイトルを表示
-                        print(json["url"].string)
-                        print(json["likes_count"].int)
-                        print(json["updated_at"].string)
-                        print(json["comments_count"].int)
-                        print(json["user"]["name"].string)
+                        self.ArticleTitle.append(json["title"].string!)
+                        self.url.append(json["url"].string!)
+                        self.LikeCount.append(json["likes_count"].int!)
+                        self.updateAt.append(json["updated_at"].string!)
+                        self.UserName.append(json["user"]["name"].string!)
                     }
-                    if let name = json["title"].string {
-                        self.name[0] = name
-                        print(name)
-                    }
+                    print(self.ArticleTitle)
+                    print(self.url)
+                    print(self.UserName)
+                    self.titleLabel1.text = self.ArticleTitle[0]
+                    self.nameLabel1.text = self.UserName[0]
                 }
                 
                 
@@ -162,7 +172,7 @@ class ViewController: UIViewController {
             self.resetCard()
         })
         likeImageView.alpha = 0
-        likedName.append(name[selectedCardCount])
+        selectArticleIndex.append(selectedCardCount)
         selectedCardCount += 1
         if selectedCardCount >= people.count{
             performSegue(withIdentifier: "pushList", sender: self)
