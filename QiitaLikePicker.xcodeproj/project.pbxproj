@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07F39E6EEABE4FA31AAEDC80 /* Pods_QuitaLikePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B7B0A67A2E80839B69F425 /* Pods_QuitaLikePicker.framework */; };
 		674061A321FE0A930065B7DC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674061A221FE0A930065B7DC /* ListViewController.swift */; };
+		67A17C322202CCCF00426843 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A17C312202CCCF00426843 /* LoginViewController.swift */; };
 		67DB948821FD4C21000F17ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DB948721FD4C21000F17ED /* AppDelegate.swift */; };
 		67DB948A21FD4C21000F17ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DB948921FD4C21000F17ED /* ViewController.swift */; };
 		67DB948D21FD4C21000F17ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67DB948B21FD4C21000F17ED /* Main.storyboard */; };
@@ -16,14 +18,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47B7B0A67A2E80839B69F425 /* Pods_QuitaLikePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitaLikePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		674061A221FE0A930065B7DC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		67DB948421FD4C21000F17ED /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67A17C312202CCCF00426843 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		67DB948421FD4C21000F17ED /* QiitaLikePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaLikePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67DB948721FD4C21000F17ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67DB948921FD4C21000F17ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		67DB948C21FD4C21000F17ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67DB948E21FD4C22000F17ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67DB949121FD4C22000F17ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67DB949321FD4C22000F17ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD9BF595FF0EE4BA2BB35FBA /* Pods-QuitaLikePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitaLikePicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuitaLikePicker/Pods-QuitaLikePicker.debug.xcconfig"; sourceTree = "<group>"; };
+		E0A134D0C73EDE8CB2573D48 /* Pods-QuitaLikePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitaLikePicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitaLikePicker/Pods-QuitaLikePicker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,32 +37,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F39E6EEABE4FA31AAEDC80 /* Pods_QuitaLikePicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00F67304037AE0B374D819E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD9BF595FF0EE4BA2BB35FBA /* Pods-QuitaLikePicker.debug.xcconfig */,
+				E0A134D0C73EDE8CB2573D48 /* Pods-QuitaLikePicker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		084264B817CB54F09191BA4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47B7B0A67A2E80839B69F425 /* Pods_QuitaLikePicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		67DB947B21FD4C21000F17ED = {
 			isa = PBXGroup;
 			children = (
-				67DB948621FD4C21000F17ED /* Tinder */,
+				67DB948621FD4C21000F17ED /* QiitaLikePicker */,
 				67DB948521FD4C21000F17ED /* Products */,
+				00F67304037AE0B374D819E4 /* Pods */,
+				084264B817CB54F09191BA4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		67DB948521FD4C21000F17ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				67DB948421FD4C21000F17ED /* Tinder.app */,
+				67DB948421FD4C21000F17ED /* QiitaLikePicker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		67DB948621FD4C21000F17ED /* Tinder */ = {
+		67DB948621FD4C21000F17ED /* QiitaLikePicker */ = {
 			isa = PBXGroup;
 			children = (
 				67DB948721FD4C21000F17ED /* AppDelegate.swift */,
+				67A17C312202CCCF00426843 /* LoginViewController.swift */,
 				67DB948921FD4C21000F17ED /* ViewController.swift */,
 				674061A221FE0A930065B7DC /* ListViewController.swift */,
 				67DB948B21FD4C21000F17ED /* Main.storyboard */,
@@ -64,27 +91,29 @@
 				67DB949021FD4C22000F17ED /* LaunchScreen.storyboard */,
 				67DB949321FD4C22000F17ED /* Info.plist */,
 			);
-			path = Tinder;
+			path = QiitaLikePicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		67DB948321FD4C21000F17ED /* Tinder */ = {
+		67DB948321FD4C21000F17ED /* QiitaLikePicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 67DB949621FD4C22000F17ED /* Build configuration list for PBXNativeTarget "Tinder" */;
+			buildConfigurationList = 67DB949621FD4C22000F17ED /* Build configuration list for PBXNativeTarget "QiitaLikePicker" */;
 			buildPhases = (
+				79E0B96A7587E55F310E980F /* [CP] Check Pods Manifest.lock */,
 				67DB948021FD4C21000F17ED /* Sources */,
 				67DB948121FD4C21000F17ED /* Frameworks */,
 				67DB948221FD4C21000F17ED /* Resources */,
+				677FC35B7F6A6E1CA748BE6C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Tinder;
+			name = QiitaLikePicker;
 			productName = Tinder;
-			productReference = 67DB948421FD4C21000F17ED /* Tinder.app */;
+			productReference = 67DB948421FD4C21000F17ED /* QiitaLikePicker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +131,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 67DB947F21FD4C21000F17ED /* Build configuration list for PBXProject "Tinder" */;
+			buildConfigurationList = 67DB947F21FD4C21000F17ED /* Build configuration list for PBXProject "QiitaLikePicker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +144,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				67DB948321FD4C21000F17ED /* Tinder */,
+				67DB948321FD4C21000F17ED /* QiitaLikePicker */,
 			);
 		};
 /* End PBXProject section */
@@ -133,11 +162,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		677FC35B7F6A6E1CA748BE6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuitaLikePicker/Pods-QuitaLikePicker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuitaLikePicker/Pods-QuitaLikePicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79E0B96A7587E55F310E980F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuitaLikePicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		67DB948021FD4C21000F17ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67A17C322202CCCF00426843 /* LoginViewController.swift in Sources */,
 				67DB948A21FD4C21000F17ED /* ViewController.swift in Sources */,
 				67DB948821FD4C21000F17ED /* AppDelegate.swift in Sources */,
 				674061A321FE0A930065B7DC /* ListViewController.swift in Sources */,
@@ -284,11 +363,12 @@
 		};
 		67DB949721FD4C22000F17ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD9BF595FF0EE4BA2BB35FBA /* Pods-QuitaLikePicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 92S7PT7663;
-				INFOPLIST_FILE = Tinder/Info.plist;
+				INFOPLIST_FILE = QiitaLikePicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,11 +382,12 @@
 		};
 		67DB949821FD4C22000F17ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0A134D0C73EDE8CB2573D48 /* Pods-QuitaLikePicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 92S7PT7663;
-				INFOPLIST_FILE = Tinder/Info.plist;
+				INFOPLIST_FILE = QiitaLikePicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,7 +402,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		67DB947F21FD4C21000F17ED /* Build configuration list for PBXProject "Tinder" */ = {
+		67DB947F21FD4C21000F17ED /* Build configuration list for PBXProject "QiitaLikePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67DB949421FD4C22000F17ED /* Debug */,
@@ -330,7 +411,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67DB949621FD4C22000F17ED /* Build configuration list for PBXNativeTarget "Tinder" */ = {
+		67DB949621FD4C22000F17ED /* Build configuration list for PBXNativeTarget "QiitaLikePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67DB949721FD4C22000F17ED /* Debug */,
