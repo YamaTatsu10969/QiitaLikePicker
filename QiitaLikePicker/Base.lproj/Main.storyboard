@@ -228,13 +228,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Je7-Ya-ezu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="Je7-Ya-ezu">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Je7-Ya-ezu" id="g28-BV-pM4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="0sw-W7-9we" kind="show" identifier="showQiitaWebsite" id="AXo-6j-PCB"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -250,6 +253,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbP-0r-pNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1828" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5x0-Af-vGj">
+            <objects>
+                <navigationController id="Qe3-yP-6rH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VaS-4T-vwc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0sw-W7-9we" kind="show" id="Hgt-zg-Vgt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ye7-NE-5x8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2630" y="-171"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="NWS-mh-i4U">
+            <objects>
+                <viewController id="0sw-W7-9we" customClass="WebViewController" customModule="QiitaLikePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MPj-9V-zix">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rju-4S-3ko">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Rju-4S-3ko" secondAttribute="trailing" id="0Qx-UH-GzM"/>
+                            <constraint firstItem="Rju-4S-3ko" firstAttribute="top" secondItem="MPj-9V-zix" secondAttribute="top" id="1qX-6g-IGL"/>
+                            <constraint firstItem="Rju-4S-3ko" firstAttribute="bottom" secondItem="xmr-7C-ahO" secondAttribute="bottom" id="aw7-uT-dNr"/>
+                            <constraint firstItem="Rju-4S-3ko" firstAttribute="leading" secondItem="MPj-9V-zix" secondAttribute="leading" id="yq9-WW-vGX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xmr-7C-ahO"/>
+                    </view>
+                    <connections>
+                        <outlet property="browserWebView" destination="Rju-4S-3ko" id="EKS-ec-d5D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCg-j0-gaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3349.5999999999999" y="132.68365817091455"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="g37-0v-OTn">
@@ -294,4 +343,7 @@
         <image name="person3" width="288" height="174.05999755859375"/>
         <image name="person4" width="384" height="256.32000732421875"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AXo-6j-PCB"/>
+    </inferredMetricsTieBreakers>
 </document>

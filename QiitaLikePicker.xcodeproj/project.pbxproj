@@ -10,6 +10,7 @@
 		07F39E6EEABE4FA31AAEDC80 /* Pods_QuitaLikePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B7B0A67A2E80839B69F425 /* Pods_QuitaLikePicker.framework */; };
 		674061A321FE0A930065B7DC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674061A221FE0A930065B7DC /* ListViewController.swift */; };
 		67A17C322202CCCF00426843 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A17C312202CCCF00426843 /* LoginViewController.swift */; };
+		67A17C34220428C500426843 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A17C33220428C500426843 /* WebViewController.swift */; };
 		67DB948821FD4C21000F17ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DB948721FD4C21000F17ED /* AppDelegate.swift */; };
 		67DB948A21FD4C21000F17ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DB948921FD4C21000F17ED /* ViewController.swift */; };
 		67DB948D21FD4C21000F17ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67DB948B21FD4C21000F17ED /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		47B7B0A67A2E80839B69F425 /* Pods_QuitaLikePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitaLikePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		674061A221FE0A930065B7DC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		67A17C312202CCCF00426843 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		67A17C33220428C500426843 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		67DB948421FD4C21000F17ED /* QiitaLikePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaLikePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67DB948721FD4C21000F17ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67DB948921FD4C21000F17ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				67A17C312202CCCF00426843 /* LoginViewController.swift */,
 				67DB948921FD4C21000F17ED /* ViewController.swift */,
 				674061A221FE0A930065B7DC /* ListViewController.swift */,
+				67A17C33220428C500426843 /* WebViewController.swift */,
 				67DB948B21FD4C21000F17ED /* Main.storyboard */,
 				67DB948E21FD4C22000F17ED /* Assets.xcassets */,
 				67DB949021FD4C22000F17ED /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 				67A17C322202CCCF00426843 /* LoginViewController.swift in Sources */,
 				67DB948A21FD4C21000F17ED /* ViewController.swift in Sources */,
 				67DB948821FD4C21000F17ED /* AppDelegate.swift in Sources */,
+				67A17C34220428C500426843 /* WebViewController.swift in Sources */,
 				674061A321FE0A930065B7DC /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

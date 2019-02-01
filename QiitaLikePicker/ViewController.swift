@@ -46,11 +46,13 @@ class ViewController: UIViewController {
     // var name = ["なつき","あかね","さくら","カルロス"]
     var likedName = [String]()
     var ArticleTitle = [String]()
+    var likeArticleTitle = [String]()
     var UserName = [String]()
     var LikeCount = [Int]()
     var url = [String]()
+    var likeUrl = [String]()
     var updateAt = [String]()
-    var selectArticleIndex = [Int]()
+//    var selectArticleIndex = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,7 +131,8 @@ class ViewController: UIViewController {
         if segue.identifier == "pushList" {
             // 遷移先の ListViewController を代入している
             let vc = segue.destination as! ListViewController
-            vc.likedName = likedName
+            vc.ArticleTitle = likeArticleTitle
+            vc.url = likeUrl
         }
     }
     @IBAction func didTouchedLikeButton(_ sender: UIButton) {
@@ -207,7 +210,9 @@ class ViewController: UIViewController {
             self.resetCard()
         })
         likeImageView.alpha = 0
-        selectArticleIndex.append(selectedCardCount)
+        //selectArticleIndex.append(selectedCardCount)
+        likeArticleTitle.append(ArticleTitle[selectedCardCount])
+        likeUrl.append(url[selectedCardCount])
         selectedCardCount += 1
         if selectedCardCount >= people.count{
             performSegue(withIdentifier: "pushList", sender: self)
