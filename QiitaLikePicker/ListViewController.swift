@@ -14,7 +14,9 @@ class ListViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     
-    var likedName = [String]()
+    var ArticleTitle = [String]()
+    var url = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -22,23 +24,33 @@ class ListViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return likedName.count
+        return ArticleTitle.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = likedName[indexPath.row]
+        cell.textLabel?.text = ArticleTitle[indexPath.row]
         return cell
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        guard let identifier = segue.identifier else {
+            return
+        }
+        if identifier == "showQiitaWebsite" {
+            let webVC = segue.destination as! WebViewController
+            if let indexPathRow = self.tableView.indexPathForSelectedRow?.row{
+                webVC.urlString = url[indexPathRow]
+                //webVC.editTask = taskCollection.tasks[indexPathRow]
+            }
+        }
+        
     }
-    */
+    
 
 }
