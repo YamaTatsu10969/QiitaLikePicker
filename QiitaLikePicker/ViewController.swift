@@ -24,6 +24,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var likeCountLabel1: UILabel!
     @IBOutlet weak var nameLabel1: UILabel!
     
+    @IBOutlet weak var titleLabel2: UILabel!
+    @IBOutlet weak var likeCountLabel2: UILabel!
+    @IBOutlet weak var nameLabel2: UILabel!
+    
+    @IBOutlet weak var titleLabel3: UILabel!
+    @IBOutlet weak var likeCountLabel3: UILabel!
+    @IBOutlet weak var nameLabel3: UILabel!
+    
+    @IBOutlet weak var titleLabel4: UILabel!
+    @IBOutlet weak var likeCountLabel4: UILabel!
+    @IBOutlet weak var nameLabel4: UILabel!
+    
     
     //値がないときは　! をつける
     var centerOfCard:CGPoint!
@@ -75,12 +87,35 @@ class ViewController: UIViewController {
                     print(self.ArticleTitle)
                     print(self.url)
                     print(self.UserName)
-                    self.titleLabel1.text = self.ArticleTitle[0]
-                    self.nameLabel1.text = self.UserName[0]
+                   
+                    self.showLabel()
                 }
                 
                 
         }
+    }
+    
+    func showLabel(){
+        
+//        for i in 0..<4 {
+//            ("titleLabel\(i + 1)").text = self.ArticleTitle[i]
+//        }
+        
+        self.titleLabel1.text = self.ArticleTitle[0]
+        self.nameLabel1.text = self.UserName[0]
+        self.likeCountLabel1.text = String(self.LikeCount[0])
+        
+        self.titleLabel2.text = self.ArticleTitle[1]
+        self.nameLabel2.text = self.UserName[1]
+        self.likeCountLabel2.text = String(self.LikeCount[1])
+        
+        self.titleLabel3.text = self.ArticleTitle[2]
+        self.nameLabel3.text = self.UserName[2]
+        self.likeCountLabel3.text = String(self.LikeCount[2])
+        
+        self.titleLabel4.text = self.ArticleTitle[3]
+        self.nameLabel4.text = self.UserName[3]
+        self.likeCountLabel4.text = String(self.LikeCount[3])
     }
     
     func resetCard(){
